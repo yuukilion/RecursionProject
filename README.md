@@ -1,1 +1,3 @@
-# RecursionProject
+# 概要
+
+コンピュータサイエンス学習サイト[Recursion](https://recursionist.io/) 内のコンピュータサイエンスプロジェクトで作成したプログラムを置いています。

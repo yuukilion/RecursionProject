@@ -1,10 +1,6 @@
 import socket
 import os
-from faker import Faker
 
-fake = Faker()
-
-print(fake.name())
 sock = socket.socket(socket.AF_UNIX,socket.SOCK_STREAM)
 
 server_address = '/socket_file'
@@ -19,8 +15,6 @@ print('Starting up on {}'.format(server_address))
 sock.bind(server_address)
 
 sock.listen(1)
-
-
 
 while True:
     #acceptはキューにある次の接続を受け入れる。(connection,client_address)のタプルを返す。
@@ -39,7 +33,6 @@ while True:
                 #現在のクライアントにメッセージを送り返す
                 response = 'Processing ' + data_str
                 connection.sendall(response.encode())
-                print(fake.name())
             else:
                 print('no data from', client_address)
                 break
